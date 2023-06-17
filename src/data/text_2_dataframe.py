@@ -63,6 +63,7 @@ class Text2DF():
         self.wordlist = self._get_wordlist()
         self.stopwords = self._get_stopwords()
         self.keep_words = keep_words
+        self.vectorizer= vectorizer
         if vectorizer:
             assert {'ngrams_range', 'use_stopwords', 'use_wordlist'}.issubset(
                 kwargs.keys()), "specify ngrams_range, use_wordlist, and use_stopwords args"
